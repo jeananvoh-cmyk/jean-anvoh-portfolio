@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jean ANVOH — Junior Digital & AI Operations Officer</title>
+<meta name="description" content="Jean ANVOH — 5 ans de supervision télécom Huawei GNOC, passionné d'automatisation et d'IA. Candidature Junior Digital & AI Operations Officer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu:#1B4DC4; --bleu-f:#11317E; --nuit:#0B1F45;
+    --teal:#0E7C86; --teal-c:#3FB6BE;
+    --vert:#16a34a; --vert-l:rgba(22,163,74,.12); --vert-b:rgba(22,163,74,.28);
+    --amber:#b45309; --amber-l:rgba(180,83,9,.10); --amber-b:rgba(180,83,9,.22);
+    --violet:#6d3fc0; --violet-l:rgba(109,63,192,.10);
+    --encre:#0E1726; --ardoise:#5B6A82; --brume:#E0E8F2; --nuage:#F4F7FB; --blanc:#fff;
+    --titre:'Bricolage Grotesque',sans-serif; --texte:'Hanken Grotesque',system-ui,sans-serif;
+    --r:16px; --sh:0 4px 20px rgba(11,31,69,.07); --sh2:0 14px 40px rgba(11,31,69,.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--texte);color:var(--encre);background:var(--nuage);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:var(--titre);letter-spacing:-.02em;line-height:1.1}
+
+  /* ── NAV ─────────────────────────────── */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(11,31,69,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px;gap:16px}
+  .nav-brand{font-family:var(--titre);font-weight:700;font-size:15px;color:#fff;flex-shrink:0}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{font-size:13px;font-weight:600;color:#8ea3c4;transition:color .15s}
+  .nav-links a:hover{color:#fff}
+  .btn-nav{background:var(--teal);color:#fff!important;padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:background .15s}
+  .btn-nav:hover{background:#0a666e!important}
+
+  /* ── HERO ────────────────────────────── */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(130% 130% at 78% -18%,#1B4DC4 0%,#11317E 44%,#0B1F45 100%);color:#fff;padding:82px 0 92px}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+  .badge-avail{display:inline-flex;align-items:center;gap:9px;background:rgba(22,163,74,.15);border:1px solid var(--vert-b);color:#4ade80;padding:7px 16px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:24px}
+  .badge-avail::before{content:"";width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
+  .kicker{font-family:var(--titre);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-c);margin-bottom:12px}
+  .hero h1{font-size:clamp(38px,7.5vw,72px);font-weight:800}
+  .hero h1 .accent{color:var(--teal-c);display:block}
+  .hero-role{color:#cdd9f3;font-size:clamp(15px,2.4vw,20px);margin-top:14px;font-weight:500}
+  .hero-pitch{color:#aebede;font-size:clamp(14.5px,1.9vw,17px);max-width:56ch;margin-top:18px;line-height:1.75}
+  .hero-pitch strong{color:#dce6f5}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:all .18s ease;cursor:pointer}
+  .btn-p{background:var(--teal);color:#fff;box-shadow:0 6px 22px rgba(14,124,134,.4)}
+  .btn-p:hover{background:#0a666e;transform:translateY(-2px)}
+  .btn-g{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+  .btn-g:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:52px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1)}
+  .stat .n{font-family:var(--titre);font-weight:800;font-size:32px}
+  .stat .l{font-size:13px;color:#8ea3c4;margin-top:3px}
+  .avatar{width:148px;height:148px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--bleu-f));display:flex;align-items:center;justify-content:center;font-family:var(--titre);font-weight:800;font-size:52px;color:#fff;border:3px solid rgba(255,255,255,.14);flex-shrink:0}
+
+  /* ── SECTION BASE ────────────────────── */
+  section{padding:80px 0}
+  .s-label{font-family:var(--titre);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+  .s-title{font-size:clamp(26px,4.4vw,38px);font-weight:800;margin-bottom:10px}
+  .s-sub{color:var(--ardoise);font-size:16px;max-width:66ch;line-height:1.7}
+  .bg-blanc{background:var(--blanc);border-top:1px solid var(--brume);border-bottom:1px solid var(--brume)}
+
+  /* ── PILLIERS ────────────────────────── */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .pillar{background:var(--blanc);border:1px solid var(--brume);border-radius:var(--r);padding:30px 24px;transition:transform .18s,box-shadow .18s}
+  .pillar:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+  .pico{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .pi-ops{background:rgba(27,77,196,.10)}
+  .pi-ai{background:rgba(14,124,134,.10)}
+  .pi-data{background:var(--violet-l)}
+  .pillar h3{font-size:18px;font-weight:700;margin-bottom:10px}
+  .pillar p{font-size:14.5px;color:var(--ardoise);line-height:1.68}
+
+  /* ── ABOUT ───────────────────────────── */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:40px}
+  .about-text p{font-size:16.5px;color:#2a3a52;line-height:1.82;margin-bottom:18px}
+  .about-text strong{color:var(--bleu)}
+  .match-head{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ardoise);margin-bottom:16px}
+  .match-list{display:flex;flex-direction:column;gap:10px}
+  .match-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--nuage);border:1px solid var(--brume);border-radius:11px}
+  .check{width:22px;height:22px;background:var(--vert-l);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  .match-item p{font-size:14px;line-height:1.5}
+  .match-item strong{color:var(--bleu-f)}
+
+  /* ── EXPÉRIENCE ──────────────────────── */
+  .exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+  .xcard{background:var(--nuage);border:1px solid var(--brume);border-radius:var(--r);padding:28px 26px}
+  .xcard.feat{background:linear-gradient(140deg,#0B1F45,#11317E);border-color:transparent;color:#fff}
+  .x-period{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-c);margin-bottom:10px}
+  .xcard h3{font-size:19px;font-weight:700;margin-bottom:5px}
+  .xcard .org{font-size:14px;font-weight:600;color:var(--ardoise);margin-bottom:18px}
+  .xcard.feat .org{color:#8ea3c4}
+  .xbullets{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .xbullets li{font-size:14px;color:#3d4f6a;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+  .xcard.feat .xbullets li{color:#aebede}
+  .xbullets li::before{content:"—";color:var(--teal);font-weight:700;flex-shrink:0}
+  .xcard.feat .xbullets li::before{color:var(--teal-c)}
+
+  /* ── PROJETS ─────────────────────────── */
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(316px,1fr));gap:18px;margin-top:40px}
+  .pcard{background:var(--blanc);border:1px solid var(--brume);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .pcard:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:#c4d4f0}
+  .pstatus{align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:999px;margin-bottom:16px;text-transform:uppercase}
+  .ps-live{background:var(--vert-l);color:#15803d;border:1px solid var(--vert-b)}
+  .ps-dev{background:var(--amber-l);color:#92400e;border:1px solid var(--amber-b)}
+  .ps-fin{background:rgba(27,77,196,.08);color:#1e3a8a;border:1px solid rgba(27,77,196,.2)}
+  .pcard h3{font-size:19px;font-weight:700;margin-bottom:10px}
+  .pimpact{font-size:13px;font-weight:600;color:var(--teal);background:rgba(14,124,134,.07);border:1px solid rgba(14,124,134,.12);padding:9px 13px;border-radius:9px;margin-bottom:13px;line-height:1.45}
+  .pdesc{font-size:14px;color:var(--ardoise);flex:1;line-height:1.68}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+  .chip{font-size:11.5px;font-weight:600;color:#3a4966;background:var(--nuage);border:1px solid var(--brume);padding:4px 10px;border-radius:7px}
+  .plink{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13.5px;color:var(--teal);margin-top:auto}
+  .plink.muted{color:var(--ardoise)}
+  .plink svg{width:14px;height:14px}
+
+  /* ── OUTILS ──────────────────────────── */
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:16px;margin-top:40px}
+  .tgroup{background:var(--nuage);border:1px solid var(--brume);border-radius:var(--r);padding:22px 20px}
+  .tgroup h4{font-family:var(--titre);font-weight:700;font-size:14px;margin-bottom:14px;color:var(--encre);display:flex;align-items:center;gap:9px}
+  .tgroup h4 .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+  .d-ai{background:var(--teal)}
+  .d-auto{background:var(--violet)}
+  .d-rep{background:var(--amber)}
+  .d-col{background:var(--bleu)}
+  .d-dev{background:var(--vert)}
+  .d-net{background:#dc2626}
+  .ttags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{font-size:12.5px;color:#384561;background:var(--blanc);border:1px solid var(--brume);padding:5px 11px;border-radius:8px}
+  .tag.h-teal{background:rgba(14,124,134,.09);border-color:rgba(14,124,134,.2);color:var(--teal);font-weight:700}
+  .tag.h-bleu{background:rgba(27,77,196,.09);border-color:rgba(27,77,196,.2);color:var(--bleu);font-weight:700}
+  .tag.h-violet{background:rgba(109,63,192,.09);border-color:rgba(109,63,192,.2);color:var(--violet);font-weight:700}
+
+  /* ── CONTACT ─────────────────────────── */
+  .contact-wrap{padding:80px 0 20px}
+  .cbox{background:linear-gradient(140deg,#11317E,#0B1F45);color:#fff;border-radius:24px;padding:58px 44px;text-align:center;position:relative;overflow:hidden}
+  .cbox::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+  .cbox>*{position:relative;z-index:1}
+  .cbox h2{font-size:clamp(24px,4vw,36px);font-weight:800}
+  .cbox-sub{color:#9fb1d6;margin-top:10px;font-size:16px}
+  .cbox-avail{display:inline-flex;align-items:center;gap:9px;background:rgba(22,163,74,.15);border:1px solid var(--vert-b);color:#4ade80;padding:8px 20px;border-radius:999px;font-size:14px;font-weight:700;margin-top:22px}
+  .cbox-avail::before{content:"";width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
+  .cbox-cta{margin-top:30px}
+  .cbox-info{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 32px;margin-top:28px}
+  .cbox-info a,.cbox-info span{color:#dbe4f7;font-size:15px;font-weight:600}
+  .cbox-info a:hover{color:var(--teal-c)}
+  .cbox-deadline{margin-top:20px;font-size:13px;color:#6888b0;font-style:italic}
+
+  footer{text-align:center;color:var(--ardoise);font-size:13px;padding:0 0 56px}
+
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr}
+    .avatar{display:none}
+    .pillars{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr;gap:36px}
+    .exp-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+  @media(max-width:540px){
+    .cbox{padding:42px 24px}
+    .hero{padding:56px 0 68px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <span class="nav-brand">Jean ANVOH</span>
+    <div class="nav-links">
+      <a href="#profil">Profil</a>
+      <a href="#experience">Expérience</a>
+      <a href="#projets">Projets</a>
+      <a href="#outils">Outils</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn-nav" href="https://github.com/jeananvoh-cmyk" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="badge-avail">Disponible immédiatement</div>
+      <div class="kicker">Abidjan · Côte d'Ivoire</div>
+      <h1>Digital &amp; AI<br><span class="accent">Operations Officer</span></h1>
+      <p class="hero-role">Supervision télécom · Automatisation · Reporting · IA appliquée</p>
+      <p class="hero-pitch">
+        <strong>5 ans</strong> de supervision réseau Core &amp; RAN chez Huawei GNOC Africa — rigueur ITIL, gestion d'incidents, reporting opérationnel quotidien. En parallèle, j'automatise, je construis des workflows et des tableaux de bord, et j'utilise <strong>Claude Code chaque jour</strong> pour accélérer mon travail.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-p" href="mailto:jeananvoh.pro@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Me contacter
+        </a>
+        <a class="btn btn-g" href="https://github.com/jeananvoh-cmyk" target="_blank" rel="noopener">
+          Voir mes projets GitHub
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="n">5 ans</div><div class="l">Supervision télécom · Huawei GNOC</div></div>
+        <div class="stat"><div class="n">Master</div><div class="l">SI — Réseaux &amp; Télécoms</div></div>
+        <div class="stat"><div class="n">7+</div><div class="l">Produits digitaux déployés</div></div>
+        <div class="stat"><div class="n">Mars 2026</div><div class="l">Utilisation IA quotidienne</div></div>
+      </div>
+    </div>
+    <div class="avatar" aria-hidden="true">JA</div>
+  </div>
+</header>
+
+<!-- PILLIERS VALEUR -->
+<section aria-label="Valeur ajoutée">
+  <div class="wrap">
+    <div class="s-label">Valeur ajoutée</div>
+    <h2 class="s-title">Ce que j'apporte au poste</h2>
+    <p class="s-sub">Trois compétences distinctes qui répondent directement aux missions Digital &amp; AI Operations.</p>
+    <div class="pillars">
+
+      <div class="pillar">
+        <div class="pico pi-ops" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4DC4" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Opérations &amp; Supervision</h3>
+        <p>5 ans en gestion d'incidents réseaux Core &amp; RAN chez Huawei GNOC Africa. Culture ITIL gravée dans les habitudes : documentation rigoureuse, reporting multi-niveaux, coordination sous pression, base de connaissances opérationnelle.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pico pi-ai" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E7C86" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Automatisation &amp; IA</h3>
+        <p>J'utilise Claude et Claude Code <strong>au quotidien</strong> — pour automatiser des workflows, rédiger de la documentation, structurer des opérations et construire des outils. 7 produits digitaux déployés en autonomie, chacun centré sur l'automatisation d'un processus métier concret.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pico pi-data" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d3fc0" stroke-width="2.2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <h3>Reporting &amp; Tableaux de bord</h3>
+        <p>Expérience concrète en reporting opérationnel télécom : KPIs réseaux, synthèses d'incidents, indicateurs de disponibilité. Mes projets intègrent tous des dashboards analytiques (Recharts, Supabase, exports CSV/Excel).</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil" class="bg-blanc">
+  <div class="wrap">
+    <div class="s-label">À propos</div>
+    <h2 class="s-title">Profil</h2>
+    <div class="about-grid">
+
+      <div class="about-text">
+        <p>Technicien de supervision réseau <strong>Core &amp; RAN</strong> chez Huawei GNOC Africa depuis 5 ans, mon quotidien est fait de <strong>supervision, documentation et reporting</strong> en conditions réelles — avec la rigueur que demandent les opérations télécom critiques.</p>
+        <p>En parallèle, j'ai bâti <strong>7 produits digitaux en autodidacte</strong> : des applications web et mobile utilisées par de vrais utilisateurs en Côte d'Ivoire. Ces projets ne sont pas des exercices de style — ce sont des solutions à de vrais problèmes opérationnels, construites avec l'IA comme accélérateur.</p>
+        <p>J'utilise <strong>Claude et Claude Code</strong> au quotidien : pour automatiser des tâches répétitives, générer de la documentation structurée, construire des workflows et fiabiliser des processus. L'IA n'est pas un sujet théorique pour moi — c'est mon outil de travail principal.</p>
+        <p>Je suis exactement le profil que vous cherchez : <strong>structuré par le télécom</strong>, <strong>curieux par nature</strong>, et <strong>accéléré par l'IA</strong>.</p>
+      </div>
+
+      <div>
+        <p class="match-head">Alignement avec le poste</p>
+        <div class="match-list">
+          <div class="match-item">
+            <div class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p><strong>Support &amp; documentation</strong> — 5 ans de gestion documentaire d'incidents selon ITIL</p>
+          </div>
+          <div class="match-item">
+            <div class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p><strong>Automatisation &amp; workflows</strong> — 7 projets avec des workflows digitaux déployés en production</p>
+          </div>
+          <div class="match-item">
+            <div class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p><strong>Reporting &amp; tableaux de bord</strong> — KPIs télécom + dashboards analytiques intégrés dans mes projets</p>
+          </div>
+          <div class="match-item">
+            <div class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p><strong>Outils IA</strong> — Claude &amp; Claude Code en usage professionnel quotidien</p>
+          </div>
+          <div class="match-item">
+            <div class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p><strong>Sens de l'organisation &amp; initiative</strong> — profil autodidacte structuré, Master SI Réseaux, 5 ans GNOC</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="s-label">Parcours</div>
+    <h2 class="s-title">Expérience</h2>
+    <div class="exp-grid">
+
+      <div class="xcard feat">
+        <div class="x-period">2019 – Présent &nbsp;·&nbsp; 5 ans</div>
+        <h3>Technicien Supervision Réseau</h3>
+        <div class="org">Huawei GNOC Africa · Abidjan</div>
+        <ul class="xbullets">
+          <li>Supervision 24/7 des incidents réseaux Core &amp; RAN (alarmes, escalades, astreintes)</li>
+          <li>Gestion et documentation des incidents selon les procédures ITIL</li>
+          <li>Reporting opérationnel quotidien, hebdomadaire et mensuel</li>
+          <li>Coordination multi-équipes sur les incidents critiques</li>
+          <li>Gestion documentaire : procédures, comptes rendus, base de connaissances</li>
+          <li>Outils : NCE, CACTI, outils de supervision Huawei, M2M/4G</li>
+        </ul>
+      </div>
+
+      <div class="xcard">
+        <div class="x-period">Mars 2026 – Présent</div>
+        <h3>Digital Builder &amp; Automatisation</h3>
+        <div class="org">Projets personnels · Abidjan</div>
+        <ul class="xbullets">
+          <li>7 produits digitaux conçus, déployés et maintenus en autonomie (web + mobile)</li>
+          <li>Automatisation de processus métier : signalement, commandes, notifications, paiements</li>
+          <li>Dashboards analytiques et tableaux de bord (Recharts, Supabase, exports CSV/Excel)</li>
+          <li>Intégration paiements mobiles Wave, Orange Money, MTN Mobile Money</li>
+          <li>Usage quotidien de Claude Code pour accélérer et fiabiliser la production</li>
+          <li>Architecture : Supabase, Firebase, Next.js, React Native, Flutter</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets" class="bg-blanc" style="border-bottom:none">
+  <div class="wrap">
+    <div class="s-label">Réalisations</div>
+    <h2 class="s-title">Projets digitaux</h2>
+    <p class="s-sub">7 produits construits en autonomie — chacun automatise un processus, résout un problème opérationnel réel.</p>
+    <div class="proj-grid">
+
+      <article class="pcard">
+        <span class="pstatus ps-live">● En ligne</span>
+        <h3>SIGNA.ci</h3>
+        <div class="pimpact">Automatisation du signalement civique d'infrastructure</div>
+        <p class="pdesc">Plateforme citoyenne qui automatise la collecte, la géolocalisation et le suivi des incidents d'infrastructure publique à Abidjan (eau, électricité, voirie, éclairage). Multi-rôles, temps réel, dashboard admin avec analytics et reporting par commune.</p>
+        <div class="chips">
+          <span class="chip">React 18</span><span class="chip">TypeScript</span><span class="chip">Supabase</span><span class="chip">PWA</span><span class="chip">Dashboard</span>
+        </div>
+        <a class="plink" href="https://signa.ci" target="_blank" rel="noopener">Voir le site
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <article class="pcard">
+        <span class="pstatus ps-live">● En ligne</span>
+        <h3>AK-Construction · CRM</h3>
+        <div class="pimpact">CRM avec relances WhatsApp automatisées</div>
+        <p class="pdesc">Système de gestion client pour une entreprise de construction : suivi centralisé des prospects, notifications et relances automatiques via API WhatsApp Meta, tableau de bord commercial et reporting des activités.</p>
+        <div class="chips">
+          <span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">WhatsApp API</span><span class="chip">Reporting</span>
+        </div>
+        <a class="plink" href="https://ak-construction-five.vercel.app/" target="_blank" rel="noopener">Voir le projet
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <article class="pcard">
+        <span class="pstatus ps-dev" style="background:rgba(27,77,196,.08);color:#1e3a8a;border:1px solid rgba(27,77,196,.2)">● En finalisation</span>
+        <h3>Miss Bedji</h3>
+        <div class="pimpact">E-commerce mobile — gestion de commandes automatisée bout en bout</div>
+        <p class="pdesc">Application mobile complète (3 rôles : vendeuse, livreur, client) avec gestion automatisée des commandes, notifications push, suivi GPS des livraisons et intégration Wave / Orange Money / MTN.</p>
+        <div class="chips">
+          <span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">Supabase</span><span class="chip">Mobile Money</span><span class="chip">Push notifs</span>
+        </div>
+        <span class="plink muted">Validation client en cours</span>
+      </article>
+
+      <article class="pcard">
+        <span class="pstatus ps-dev">● En développement</span>
+        <h3>ONSECOTA</h3>
+        <div class="pimpact">Digitalisation de la gestion d'argent collectif informel</div>
+        <p class="pdesc">5 modules qui automatisent la gestion financière collective : collecte solidaire, split bill (algorithme de remboursement minimum), tontine digitale, prêt entre amis, cagnotte commune — paiements Wave / Orange Money directs.</p>
+        <div class="chips">
+          <span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">Wave</span><span class="chip">Riverpod</span><span class="chip">Fintech</span>
+        </div>
+        <span class="plink muted">Bientôt en ligne</span>
+      </article>
+
+      <article class="pcard">
+        <span class="pstatus ps-dev">● En développement</span>
+        <h3>Budget.ci</h3>
+        <div class="pimpact">Reporting budgétaire mobile — offline-first avec OCR</div>
+        <p class="pdesc">Application mobile de suivi budgétaire avec tableau de bord financier, catégorisation automatique des dépenses et reconnaissance optique (OCR) des reçus Wave / Orange Money — fonctionne sans connexion.</p>
+        <div class="chips">
+          <span class="chip">Expo</span><span class="chip">React Native</span><span class="chip">SQLite</span><span class="chip">OCR</span><span class="chip">Dashboard</span>
+        </div>
+        <span class="plink muted">Bientôt en ligne</span>
+      </article>
+
+      <article class="pcard">
+        <span class="pstatus ps-dev">● En développement</span>
+        <h3>Couture Pro CI</h3>
+        <div class="pimpact">Marketplace métier avec notation algorithmique automatique</div>
+        <p class="pdesc">Plateforme mobile pour couturiers d'Abidjan : gestion des commandes, notation pondérée automatique (60 % délai / 25 % qualité / 15 % prix), scan de mesures via ML Kit et suivi GPS des livraisons.</p>
+        <div class="chips">
+          <span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">ML Kit</span><span class="chip">Google Maps</span>
+        </div>
+        <span class="plink muted">En développement</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUTILS -->
+<section id="outils">
+  <div class="wrap">
+    <div class="s-label">Compétences</div>
+    <h2 class="s-title">Outils &amp; expertise</h2>
+    <p class="s-sub">Organisés par domaine — en lien direct avec les missions Digital &amp; AI Operations.</p>
+    <div class="tools-grid">
+
+      <div class="tgroup">
+        <h4><span class="dot d-ai"></span>Outils IA — usage quotidien</h4>
+        <div class="ttags">
+          <span class="tag h-teal">Claude</span>
+          <span class="tag h-teal">Claude Code</span>
+          <span class="tag">ChatGPT</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">Perplexity</span>
+          <span class="tag">Agents IA</span>
+          <span class="tag">Prompting avancé</span>
+        </div>
+      </div>
+
+      <div class="tgroup">
+        <h4><span class="dot d-auto"></span>Automatisation &amp; No-code</h4>
+        <div class="ttags">
+          <span class="tag h-violet">Workflows</span>
+          <span class="tag h-violet">Power Automate</span>
+          <span class="tag">n8n</span>
+          <span class="tag">Web scraping</span>
+          <span class="tag">API integration</span>
+        </div>
+      </div>
+
+      <div class="tgroup">
+        <h4><span class="dot d-rep"></span>Reporting &amp; Data</h4>
+        <div class="ttags">
+          <span class="tag h-bleu">Excel avancé</span>
+          <span class="tag h-bleu">Google Sheets</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Tableaux de bord</span>
+          <span class="tag">Export CSV / PDF</span>
+        </div>
+      </div>
+
+      <div class="tgroup">
+        <h4><span class="dot d-col"></span>Bureautique &amp; collaboratif</h4>
+        <div class="ttags">
+          <span class="tag">Microsoft 365</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">Outlook</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Notion</span>
+        </div>
+      </div>
+
+      <div class="tgroup">
+        <h4><span class="dot d-dev"></span>Développement</h4>
+        <div class="ttags">
+          <span class="tag">React / Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Flutter</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Vercel</span>
+        </div>
+      </div>
+
+      <div class="tgroup">
+        <h4><span class="dot d-net"></span>Réseaux &amp; Supervision</h4>
+        <div class="ttags">
+          <span class="tag">TCP/IP</span>
+          <span class="tag">IS-IS / MPLS</span>
+          <span class="tag">Huawei NCE</span>
+          <span class="tag">CACTI</span>
+          <span class="tag">ITIL</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-wrap" aria-label="Contact et candidature">
+  <div class="wrap">
+    <div class="cbox">
+      <h2>Candidature — Junior Digital &amp; AI Operations Officer</h2>
+      <p class="cbox-sub">Je vous adresse mon CV, une présentation, mes réalisations, mes outils IA et mes prétentions salariales.</p>
+      <div class="cbox-avail">Disponible immédiatement</div>
+      <div class="cbox-info">
+        <a href="mailto:jeananvoh.pro@gmail.com">jeananvoh.pro@gmail.com</a>
+        <span>+225 07 08 19 65 64</span>
+        <a href="https://github.com/jeananvoh-cmyk" target="_blank" rel="noopener">github.com/jeananvoh-cmyk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Jean ANVOH · Abidjan, Côte d'Ivoire</footer>
+
+</body>
+</html>
