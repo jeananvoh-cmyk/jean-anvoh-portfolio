@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bleu:#065F46; --bleu-f:#1A1A1A; --nuit:#0D0D0D;
-    --teal:#10B981; --teal-c:#34D399;
+    --bleu:#065F46; --bleu-f:#141728; --nuit:#0B0D14;
+    --teal:#06B6D4; --teal-c:#22D3EE;
     --vert:#16a34a; --vert-l:rgba(22,163,74,.12); --vert-b:rgba(22,163,74,.28);
     --amber:#b45309; --amber-l:rgba(180,83,9,.10); --amber-b:rgba(180,83,9,.22);
     --violet:#6d3fc0; --violet-l:rgba(109,63,192,.10);
@@ -27,31 +27,33 @@
   h1,h2,h3,h4{font-family:var(--titre);letter-spacing:-.02em;line-height:1.1}
 
   /* ── NAV ─────────────────────────────── */
-  .nav{position:sticky;top:0;z-index:100;background:rgba(13,13,13,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav{position:sticky;top:0;z-index:100;background:rgba(8,10,20,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px;gap:16px}
-  .nav-brand{font-family:var(--titre);font-weight:700;font-size:15px;color:#fff;flex-shrink:0}
-  .nav-links{display:flex;gap:22px}
-  .nav-links a{font-size:13px;font-weight:600;color:#A8A29E;transition:color .15s}
+  .nav-brand{font-family:'Courier New',ui-monospace,monospace;font-weight:700;font-size:15px;color:#fff;flex-shrink:0;letter-spacing:-.01em}
+  .nav-brand .brand-cursor{color:var(--teal-c)}
+  .nav-links{display:flex;gap:20px}
+  .nav-links a{display:flex;flex-direction:column;align-items:flex-start;gap:1px;font-size:12px;font-weight:600;color:#A8A29E;transition:color .15s}
   .nav-links a:hover{color:#fff}
+  .nav-num{font-family:'Courier New',ui-monospace,monospace;font-size:9px;letter-spacing:.08em;color:rgba(255,255,255,.22);line-height:1}
   .btn-nav{background:var(--teal);color:#fff!important;padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:background .15s}
-  .btn-nav:hover{background:#059669!important}
+  .btn-nav:hover{background:#0891B2!important}
 
   /* ── HERO ────────────────────────────── */
-  .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse 45% 55% at 88% 8%,rgba(16,185,129,.07) 0%,transparent 55%),#0D0D0D;color:#fff;padding:82px 0 92px}
+  .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse 45% 55% at 88% 8%,rgba(6,182,212,.07) 0%,transparent 55%),#0B0D14;color:#fff;padding:82px 0 92px}
   .hero::before{content:"";position:absolute;inset:0;background-image:none;pointer-events:none}
   .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
   .badge-avail{display:inline-flex;align-items:center;gap:9px;background:rgba(22,163,74,.15);border:1px solid var(--vert-b);color:#4ade80;padding:7px 16px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:24px}
   .badge-avail::before{content:"";width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
   .kicker{font-family:var(--titre);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-c);margin-bottom:12px}
-  .hero h1{font-size:clamp(52px,9vw,100px);font-weight:800;line-height:1.0;letter-spacing:-.03em}
+  .hero h1{font-size:clamp(52px,9vw,100px);font-weight:800;line-height:1.0;letter-spacing:-.02em;text-transform:uppercase}
   .hero h1 .accent{color:var(--teal-c);display:block}
-  .hero-role{color:#D6D3D1;font-size:clamp(15px,2.4vw,20px);margin-top:14px;font-weight:500}
+  .hero-role{color:#94A3B8;font-size:clamp(11px,1.6vw,14px);margin-top:14px;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-family:'Courier New',ui-monospace,monospace}
   .hero-pitch{display:none}
   .hero-pitch strong{color:#F5F5F4}
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:all .18s ease;cursor:pointer}
-  .btn-p{background:var(--teal);color:#fff;box-shadow:0 6px 22px rgba(16,185,129,.35)}
-  .btn-p:hover{background:#059669;transform:translateY(-2px)}
+  .btn-p{background:var(--teal);color:#fff;box-shadow:0 6px 22px rgba(6,182,212,.35)}
+  .btn-p:hover{background:#0891B2;transform:translateY(-2px)}
   .btn-g{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
   .btn-g:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
   .hero-stats{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:52px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1)}
@@ -72,7 +74,7 @@
   .pillar:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
   .pico{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
   .pi-ops{background:rgba(27,77,196,.10)}
-  .pi-ai{background:rgba(16,185,129,.10)}
+  .pi-ai{background:rgba(6,182,212,.10)}
   .pi-data{background:var(--violet-l)}
   .pillar h3{font-size:18px;font-weight:700;margin-bottom:10px}
   .pillar p{font-size:14px;color:var(--ardoise);line-height:1.68}
@@ -91,7 +93,7 @@
   /* ── EXPÉRIENCE ──────────────────────── */
   .exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
   .xcard{background:var(--nuage);border:1px solid var(--brume);border-radius:var(--r);padding:28px 26px}
-  .xcard.feat{background:linear-gradient(140deg,#0D0D0D,#1A1A1A);border-color:transparent;color:#fff}
+  .xcard.feat{background:linear-gradient(140deg,#0B0D14,#141728);border-color:transparent;color:#fff}
   .x-period{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-c);margin-bottom:10px}
   .xcard h3{font-size:19px;font-weight:700;margin-bottom:5px}
   .xcard .org{font-size:14px;font-weight:600;color:var(--ardoise);margin-bottom:18px}
@@ -105,13 +107,13 @@
   /* ── PROJETS ─────────────────────────── */
   .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(316px,1fr));gap:18px;margin-top:40px}
   .pcard{background:var(--blanc);border:1px solid var(--brume);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s}
-  .pcard:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:rgba(16,185,129,.28)}
+  .pcard:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:rgba(6,182,212,.28)}
   .pstatus{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:999px;margin-bottom:16px;text-transform:uppercase}
   .ps-live{background:var(--vert-l);color:#15803d;border:1px solid var(--vert-b)}
   .ps-dev{background:var(--amber-l);color:#92400e;border:1px solid var(--amber-b)}
   .ps-fin{background:rgba(27,77,196,.08);color:#1e3a8a;border:1px solid rgba(27,77,196,.2)}
   .pcard h3{font-size:19px;font-weight:700;margin-bottom:10px}
-  .pimpact{font-size:13px;font-weight:600;color:var(--teal);background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.18);padding:9px 13px;border-radius:9px;margin-bottom:13px;line-height:1.45}
+  .pimpact{font-size:13px;font-weight:600;color:var(--teal);background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);padding:9px 13px;border-radius:9px;margin-bottom:13px;line-height:1.45}
   .pdesc{font-size:14px;color:var(--ardoise);flex:1;line-height:1.68}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
   .chip{font-size:12px;font-weight:600;color:#57534E;background:var(--nuage);border:1px solid var(--brume);padding:4px 10px;border-radius:7px}
@@ -132,13 +134,13 @@
   .d-net{background:#dc2626}
   .ttags{display:flex;flex-wrap:wrap;gap:7px}
   .tag{font-size:12.5px;color:#57534E;background:var(--blanc);border:1px solid var(--brume);padding:5px 11px;border-radius:8px}
-  .tag.h-teal{background:rgba(16,185,129,.09);border-color:rgba(16,185,129,.22);color:var(--teal);font-weight:700}
+  .tag.h-teal{background:rgba(6,182,212,.09);border-color:rgba(6,182,212,.22);color:var(--teal);font-weight:700}
   .tag.h-bleu{background:rgba(27,77,196,.09);border-color:rgba(27,77,196,.2);color:var(--bleu);font-weight:700}
   .tag.h-violet{background:rgba(109,63,192,.09);border-color:rgba(109,63,192,.2);color:var(--violet);font-weight:700}
 
   /* ── CONTACT ─────────────────────────── */
   .contact-wrap{padding:80px 0 20px}
-  .cbox{background:linear-gradient(140deg,#1A1A1A,#0D0D0D);color:#fff;border-radius:24px;padding:58px 44px;text-align:center;position:relative;overflow:hidden}
+  .cbox{background:linear-gradient(140deg,#141728,#0B0D14);color:#fff;border-radius:24px;padding:58px 44px;text-align:center;position:relative;overflow:hidden}
   .cbox::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
   .cbox>*{position:relative;z-index:1}
   .cbox h2{font-size:clamp(24px,4vw,36px);font-weight:800}
@@ -155,6 +157,29 @@
 
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
 
+  /* ── EXPÉRIENCE ACCORDION ────────────── */
+  .exp-section-dark{background:var(--nuit)}
+  .exp-section-dark .s-label{color:var(--teal-c)}
+  .exp-section-dark .s-title{color:#fff}
+  .exp-accordion{display:flex;flex-direction:column;gap:6px;margin-top:40px}
+  .acc-item{border-radius:14px;overflow:hidden}
+  .acc-header{width:100%;display:flex;align-items:center;gap:16px;background:#141728;padding:18px 22px;cursor:pointer;text-align:left;transition:background .18s;border:1px solid rgba(255,255,255,.07);border-radius:14px}
+  .acc-header:hover{background:#1c2240}
+  .acc-header:focus-visible{outline:2px solid var(--teal-c);outline-offset:2px}
+  .acc-header[aria-expanded="true"]{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:rgba(34,211,238,.18)}
+  .acc-left{flex:1;min-width:0}
+  .acc-role{font-family:var(--titre);font-weight:700;font-size:16px;color:#fff;display:block;line-height:1.2}
+  .acc-company{font-size:13px;color:#94A3B8;margin-top:3px;display:block}
+  .acc-date{font-size:11px;color:#64748B;white-space:nowrap;font-family:'Courier New',ui-monospace,monospace;letter-spacing:.04em;text-align:right;line-height:1.5;flex-shrink:0}
+  .acc-icon{width:30px;height:30px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:300;color:#fff;flex-shrink:0;transition:transform .22s ease,border-color .18s,color .18s;user-select:none}
+  .acc-header[aria-expanded="true"] .acc-icon{transform:rotate(45deg);border-color:var(--teal-c);color:var(--teal-c)}
+  .acc-body{background:#080B12;border:1px solid rgba(255,255,255,.07);border-top:none;border-bottom-left-radius:14px;border-bottom-right-radius:14px;overflow:hidden;max-height:0;transition:max-height .32s ease}
+  .acc-body.open{max-height:600px}
+  .acc-body-inner{padding:16px 22px 22px}
+  .acc-bullets{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .acc-bullets li{font-size:14px;color:#94A3B8;display:flex;gap:10px;align-items:flex-start;line-height:1.55}
+  .acc-bullets li::before{content:"//";color:var(--teal-c);font-family:'Courier New',ui-monospace,monospace;font-size:11px;flex-shrink:0;padding-top:2px}
+
   /* ── ACCESSIBILITÉ & INTERACTIONS ────── */
   :focus-visible{outline:2px solid var(--teal-c);outline-offset:3px;border-radius:4px}
   #profil,#experience,#projets,#outils,#contact{scroll-margin-top:74px}
@@ -164,9 +189,9 @@
   .plink:hover{color:#059669}
   .plink:hover svg{transform:translate(2px,-2px)}
   .tgroup{transition:border-color .18s,box-shadow .18s,background .18s}
-  .tgroup:hover{border-color:rgba(16,185,129,.28);box-shadow:var(--sh);background:var(--blanc)}
+  .tgroup:hover{border-color:rgba(6,182,212,.28);box-shadow:var(--sh);background:var(--blanc)}
   .match-item{transition:border-color .15s,background .15s}
-  .match-item:hover{border-color:rgba(16,185,129,.28);background:var(--blanc)}
+  .match-item:hover{border-color:rgba(6,182,212,.28);background:var(--blanc)}
   .nav-links a.active{color:#fff;position:relative}
   .nav-links a.active::after{content:"";position:absolute;bottom:-17px;left:0;right:0;height:2px;background:var(--teal-c);border-radius:1px}
 
@@ -190,13 +215,13 @@
 <!-- NAV -->
 <nav class="nav" aria-label="Navigation principale">
   <div class="wrap">
-    <span class="nav-brand">Jean ANVOH</span>
+    <span class="nav-brand">JeanANVOH<span class="brand-cursor">._</span></span>
     <div class="nav-links">
-      <a href="#profil">Profil</a>
-      <a href="#experience">Expérience</a>
-      <a href="#projets">Projets</a>
-      <a href="#outils">Outils</a>
-      <a href="#contact">Contact</a>
+      <a href="#profil"><span class="nav-num">01</span>// Profil</a>
+      <a href="#experience"><span class="nav-num">02</span>// Expérience</a>
+      <a href="#projets"><span class="nav-num">03</span>// Projets</a>
+      <a href="#outils"><span class="nav-num">04</span>// Outils</a>
+      <a href="#contact"><span class="nav-num">05</span>// Contact</a>
     </div>
     <a class="btn-nav" href="https://github.com/jeananvoh-cmyk" target="_blank" rel="noopener">GitHub</a>
   </div>
@@ -277,7 +302,7 @@
     <div class="about-grid">
 
       <div class="about-text">
-        <p>Technicien de supervision réseau <strong>Core &amp; RAN</strong> chez Huawei GNOC Africa depuis 5 ans, mon quotidien est fait de <strong>supervision, documentation et reporting</strong> en conditions réelles — avec la rigueur que demandent les opérations télécom critiques.</p>
+        <p>Ingénieur de supervision réseau <strong>Core &amp; RAN</strong> chez Huawei GNOC Africa depuis 5 ans, mon quotidien est fait de <strong>supervision, documentation et reporting</strong> en conditions réelles — avec la rigueur que demandent les opérations télécom critiques.</p>
         <p>En parallèle, j'ai bâti <strong>7 produits digitaux en autodidacte</strong> : des applications web et mobile utilisées par de vrais utilisateurs en Côte d'Ivoire. Ces projets ne sont pas des exercices de style — ce sont des solutions à de vrais problèmes opérationnels, construites avec l'IA comme accélérateur.</p>
         <p>J'utilise <strong>Claude et Claude Code</strong> au quotidien : pour automatiser des tâches répétitives, générer de la documentation structurée, construire des workflows et fiabiliser des processus. L'IA n'est pas un sujet théorique pour moi — c'est mon outil de travail principal.</p>
         <p>Je suis exactement le profil que vous cherchez : <strong>structuré par le télécom</strong>, <strong>curieux par nature</strong>, et <strong>accéléré par l'IA</strong>.</p>
@@ -324,38 +349,146 @@
 </section>
 
 <!-- EXPÉRIENCE -->
-<section id="experience">
+<section id="experience" class="exp-section-dark">
   <div class="wrap">
     <div class="s-label">Parcours</div>
-    <h2 class="s-title">Expérience</h2>
-    <div class="exp-grid">
+    <h2 class="s-title">Expérience professionnelle</h2>
+    <div class="exp-accordion">
 
-      <div class="xcard feat">
-        <div class="x-period">2019 – Présent &nbsp;·&nbsp; 5 ans</div>
-        <h3>Technicien Supervision Réseau</h3>
-        <div class="org">Huawei GNOC Africa · Abidjan</div>
-        <ul class="xbullets">
-          <li>Supervision 24/7 des incidents réseaux Core &amp; RAN (alarmes, escalades, astreintes)</li>
-          <li>Gestion et documentation des incidents selon les procédures ITIL</li>
-          <li>Reporting opérationnel quotidien, hebdomadaire et mensuel</li>
-          <li>Coordination multi-équipes sur les incidents critiques</li>
-          <li>Gestion documentaire : procédures, comptes rendus, base de connaissances</li>
-          <li>Outils : NCE, CACTI, outils de supervision Huawei, M2M/4G</li>
-        </ul>
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="true">
+          <div class="acc-left">
+            <span class="acc-role">Digital Builder &amp; Automatisation</span>
+            <span class="acc-company">Projets personnels · Abidjan</span>
+          </div>
+          <span class="acc-date">Mars 2026<br>Présent</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body open">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>7 produits digitaux conçus, déployés et maintenus en autonomie (web + mobile)</li>
+              <li>Automatisation de processus métier : signalement, commandes, notifications, paiements</li>
+              <li>Dashboards analytiques et tableaux de bord (Recharts, Supabase, exports CSV/Excel)</li>
+              <li>Intégration paiements mobiles Wave, Orange Money, MTN Mobile Money</li>
+              <li>Usage quotidien de Claude Code pour accélérer et fiabiliser la production</li>
+              <li>Architecture : Supabase, Firebase, Next.js, React Native, Flutter</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="xcard">
-        <div class="x-period">Mars 2026 – Présent</div>
-        <h3>Digital Builder &amp; Automatisation</h3>
-        <div class="org">Projets personnels · Abidjan</div>
-        <ul class="xbullets">
-          <li>7 produits digitaux conçus, déployés et maintenus en autonomie (web + mobile)</li>
-          <li>Automatisation de processus métier : signalement, commandes, notifications, paiements</li>
-          <li>Dashboards analytiques et tableaux de bord (Recharts, Supabase, exports CSV/Excel)</li>
-          <li>Intégration paiements mobiles Wave, Orange Money, MTN Mobile Money</li>
-          <li>Usage quotidien de Claude Code pour accélérer et fiabiliser la production</li>
-          <li>Architecture : Supabase, Firebase, Next.js, React Native, Flutter</li>
-        </ul>
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">RAN Front Incident Handler OSL</span>
+            <span class="acc-company">GNOC AFRICA · Huawei Technologies</span>
+          </div>
+          <span class="acc-date">Août 2024<br>Présent</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Responsable de la gestion des activités de rétablissement de service dans le respect des SLA</li>
+              <li>Rapports pour les réunions conjointes avec le client OSL — résilience réseau 2G/3G/4G/5G</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">FO RAN / Core Engineer</span>
+            <span class="acc-company">GNOC AFRICA · Huawei Technologies</span>
+          </div>
+          <span class="acc-date">Août 2023<br>Août 2024</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Supervision et monitoring du réseau Orange Sierra Leone via NCE, Weather Map et CACTI</li>
+              <li>Mise à jour régulière de la base de tickets incidents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">FO IP Engineer</span>
+            <span class="acc-company">GNOC AFRICA · Huawei Technologies</span>
+          </div>
+          <span class="acc-date">Avril 2021<br>Juillet 2023</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Supervision et monitoring lors des rotations d'astreinte programmées (24h/7j)</li>
+              <li>Respect des SLA et application des bonnes pratiques ITIL</li>
+              <li>Support aux filiales de Côte d'Ivoire, Guinée, Cameroun et Congo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">Formateur Informatique</span>
+            <span class="acc-company">IACCESS ACADEMY · Grand-Bassam VITIB</span>
+          </div>
+          <span class="acc-date">2020<br>2021</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Formateur certifié ICDL — Programme National de Certification des Compétences Digitales (PNCCD)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">Assistant Technicien Informatique</span>
+            <span class="acc-company">GARDIANS ASSISTANCE · Abidjan Treichville</span>
+          </div>
+          <span class="acc-date">2017<br>8 mois</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Gestion des comptes utilisateurs (Active Directory)</li>
+              <li>Administration emails Outlook et système de sauvegarde/antivirus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-role">Assistant Informatique</span>
+            <span class="acc-company">DRH · Ministère de l'Éducation Nationale</span>
+          </div>
+          <span class="acc-date">2016<br>2017</span>
+          <span class="acc-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <ul class="acc-bullets">
+              <li>Maintenance et dépannage des équipements utilisateurs : ordinateurs, imprimantes, téléphones</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -542,5 +675,35 @@
 
 <footer>© 2026 Jean ANVOH · Abidjan, Côte d'Ivoire</footer>
 
+<script>
+  // Accordion expérience
+  document.querySelectorAll('.acc-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.acc-header').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+
+  // Nav active on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '-72px 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
